@@ -130,10 +130,8 @@ class HmailServerAutoReplySqlDriver
 
 	/**
 	 * @param \RainLoop\Account $oAccount
-	 * @param string $sPrevPassword
-	 * @param string $sNewPassword
 	 *
-	 * @return bool
+	 * @return array
 	 */
 	public function Get(\RainLoop\Account $oAccount)
 	{
@@ -155,10 +153,7 @@ class HmailServerAutoReplySqlDriver
 		{
 			$conn = new PDO($dsn, $this->mUser, $this->mPass, $options);
 
-			//prepare SQL varaibles
 			$sEmail = $oAccount->Email();
-
-			//simple check
 
 			$old = array(':table' );
 			$new = array( $this->mTable);
