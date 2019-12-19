@@ -1,0 +1,63 @@
+<div>
+	<div class="form-horizontal">
+		<div class="legend">
+			<span class="i18n" data-i18n="SETTINGS_CUSTOM_PLUGIN/LEGEND_CUSTOM"></span>
+			&nbsp;&nbsp;&nbsp;
+			<i class="icon-spinner animated" style="margin-top: 5px" data-bind="visible: loading"></i>
+		</div>
+		<div class="control-group">
+			<label class="control-label">
+				<span class="i18n" data-i18n="SETTINGS_CUSTOM_PLUGIN/LABEL_VACATION_MESSAGE_ON"></span>
+			</label>
+			<div class="controls">
+				<input type="checkbox" data-bind="checked: vacationmessageon, enable: !savingOrLoading()" />
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">
+				<span class="i18n" data-i18n="SETTINGS_CUSTOM_PLUGIN/LABEL_VACATION_SUBJECT"></span>
+			</label>
+			<div class="controls">
+				<input type="text" data-bind="value: vacationsubject, enable: !savingOrLoading()" size="200" maxlength="200" />
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">
+				<span class="i18n" data-i18n="SETTINGS_CUSTOM_PLUGIN/LABEL_VACATION_MESSAGE"></span>
+			</label>
+			<div class="controls">
+				<textarea data-bind="value: vacationmessage, enable: !savingOrLoading()" rows="6" rols="55" />
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">
+				<span class="i18n" data-i18n="SETTINGS_CUSTOM_PLUGIN/LABEL_VACATION_MESSAGE_EXPIRES"></span>
+			</label>
+			<div class="controls">
+				<input type="checkbox" data-bind="checked: vacationmessageexpires, enable: !savingOrLoading()" />
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">
+				<span class="i18n" data-i18n="SETTINGS_CUSTOM_PLUGIN/LABEL_VACATION_MESSAGE_EXPIRES_DATE"></span>
+			</label>
+			<div class="controls">
+				<input type="date" data-bind="value: vacationmessageexpiresdate, enable: !savingOrLoading()" maxlength="10" data-toggle="datepicker" class="medium">
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<button class="btn" data-bind="click: customAjaxSaveData, enable: !savingOrLoading()">
+					<i data-bind="css: {'icon-floppy': !saving(), 'icon-spinner animated': saving()}" class="icon-floppy"></i>
+					&nbsp;&nbsp;
+					<span class="i18n" data-i18n="SETTINGS_CUSTOM_PLUGIN/BUTTON_SAVE"></span>
+				</button>
+			</div>
+		</div>
+		<div class="legend">
+			<span class="i18n i18n-animation" data-i18n="SETTINGS_CUSTOM_PLUGIN/HELP"></span>
+		</div>
+		<p class="i18n i18n-animation" data-i18n="SETTINGS_CUSTOM_PLUGIN/DELAY"></p>
+		<p class="i18n i18n-animation" data-i18n="SETTINGS_CUSTOM_PLUGIN/ONEMESSAGEPERRECIPIENT"></p>
+	</div>
+</div>
